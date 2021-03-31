@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css_tag</title>
+</head>
+
+<body>
+	<div>Hello, teacher!</div>
+</body>
+</html>
+<style>
+	*{
+		box-sizing: border-box;
+	}
+	body,html{
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		height: 100%;
+		width: 100%;
+	}
+
+	div{
+		width: 100%;
+		height: 120px;
+		margin-top: 0%;
+		font-size: 55px;
+		color: white;
+		font-weight: 900;
+		display: flex;
+		background:#5CDDA8;
+		border-radius: 10px;
+		justify-content: center;
+		align-items: center;
+		animation-name: action;
+		animation-duration: 3s;
+	}
+	
+	@keyframes action{
+		from{background:#C5E32E; margin-top:250px;width: 400px;height: 80px;font-size: 24px;}
+		to{background:#5CDDA8; margin-top: 0%;width: 100%;height: 120px;font-size: 55px;}
+	}
+
+	}
+</style>
