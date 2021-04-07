@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>测试</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+		body{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+		}
+        .top-container{
+            background-color: #333;
+            height:30px;
+           // min-width: 1500px;
+            height: 60px; 
+            margin: 0;
+         
+			display: flex;
+			//justify-content: center;
+        }
+        .nav{
+            display: inline-block;
+            margin:0 auto;
+            padding:0;
+            position: relative;
+			
+        }
+
+        .nav:after{
+            content:"";
+            display:block;
+            clear:both;
+            visibility: hidden;
+            width:0px;
+            height:0px;
+        }
+
+        .nav ul ,.nav li{
+            display: block;
+            position: relative;
+            margin:0px;
+            padding:0px;
+        }
+
+        .nav a{
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin:0 auto;
+        }
+
+        .first-nav{
+                float: left;
+                text-align:center;
+                display: block;
+                margin:0 auto;
+        }
+
+        .sec-nav{
+                position: relative;
+                display: none;
+                text-align:center;
+				line-height: 100px;
+				background: #373636;
+				
+        }
+        .top-left-nav .first-nav{
+          /*显示具体布局*/
+            width:130px;
+			
+        }
+        .top-left-nav  .sec-nav{
+            margin:0px;
+            display: none;
+            line-height: 40px;
+            width: 150px;
+        }
+		.third-nav{
+			display: none;
+		}
+        .top-left-nav .first-nav:hover .sec-nav{
+            display: block;    
+        }
+		.top-left-nav .first-nav:hover .third-nav{
+			display:none;
+		}
+		.top-left-nav .sec-nav li:hover .third-nav{
+			display: block;
+			position: absolute;
+		}
+		.top-left-nav .first-nav:hover{
+       		background-color: #111;
+        }
+		.top-left-nav .sec-nav li:hover{
+       		background-color: #222;
+        }
+		.top-left-nav .sec-nav .third-nav li:hover{
+			background: #333;
+		}
+		.dropdown.first-nav{
+			background-color: #333;
+			color: white;
+			font-size: 20px;
+			width: 150px;
+			line-height: 60px;
+			font-weight: 500;
+			
+		}
+		a{
+			color: aliceblue;
+			
+			font-size: 17px;
+			font-weight: 550;
+		}
+		.third-nav{
+			font-size: 14px;
+			font-weight: 550;
+			width: 140px;
+			line-height: 30px;
+			color: white;
+			display: none;
+			left:150px;
+			top: 0;
+			background: #4E4E4E;
+		}
+		.logo{
+			margin-left: 40px;
+		}
+    </style>
+  </head>
+  <body style="margin:0;">
+        <!--导航栏一般需要一个容器，设置width:100%适应浏览器的大小变化-->
+ 
+   <div  class="top-container container">
+     <!--导航栏wrapper一般设置一个固定大小这样子可以通过margin:auto;实现导航栏水平居中
+     由于顶层容器是适应浏览器变化宽度，所以可以保持水平导航栏自适应浏览器窗口宽度保持居中-->
+	  <img class="logo" src="../images/logo.png" width="245" height="57">
+      <div class="nav top-left-nav">
+        <!--开始实现列表-->
+       <ul>
+		   <li class="dropdown first-nav"><span>首页<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">热点</a></li>
+			  <li><a href="#">学院新闻</a></li>
+			  <li><a href="#">党建专题·</a>
+				 <ul class="third-nav">
+					 <li>“不忘初心，牢记使命”专题</li>
+					 <li>“百年党史”专题</li>
+					 <li>“学习两会”专题</li>
+				 </ul>
+			  </li>
+			  <li><a href="#">近期互动</a></li>
+			 </ul> </li>
+		   <li class="dropdown first-nav"><span>走进信管<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">院长寄语</a></li>
+			  <li><a href="#">学院简介</a></li>
+			  <li><a href="#">大事记</a></li>
+			  <li><a href="#">学院领导</a></li>
+			  <li><a href="#">历任院长</a></li>
+			  <li><a href="#">组织机构·</a>
+				 <ul class="third-nav">
+					 <li>学科专业</li>
+					 <li>教学机构</li>
+					 <li>职能部门</li>
+					 <li>研究机构</li>
+				 </ul>
+              </li>
+			  <li><a href="#">联系我们</a></li>
+			 </ul> </li>
+		   <li class="dropdown first-nav"><span>人才培养<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">本科教育·</a>
+				 <ul class="third-nav">
+					 <li>信息管理与信息系统专业</li>
+					 <li>图书情报学专业</li>
+					 <li>档案学专业</li>
+				 </ul>
+		      </li>
+			  <li><a href="#">硕士·</a>
+				 <ul class="third-nav">
+					 <li>情报学</li>
+					 <li>图书馆学</li>
+					 <li>档案学</li>
+				 </ul>
+		      </li>
+			  <li><a href="#">博士·</a>
+				 <ul class="third-nav">
+					 <li>博士点</li>
+					 <li>博士课程</li>
+				 </ul>
+			   </li>
+			 </ul> </li>
+		   <li class="dropdown  first-nav"><span>科学研究<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">主要研究方向</a></li>
+			  <li><a href="#">在研课题</a></li>
+			  <li><a href="#">科研成果</a></li>
+			 </ul> </li>
+		   <li class="dropdown  first-nav"><span>国际合作<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">海外合作·</a>
+				 <ul class="third-nav">
+					 <li>XX——XX国际项目</li>
+					 <li>学期国际交换项目</li>
+					 <li>博士联合培养方案</li>
+				 </ul>
+		      </li>
+			  <li><a href="#">国际交换·</a>
+				 <ul class="third-nav">
+					 <li>交换院校</li>
+					 <li>本科</li>
+					 <li>硕博</li>
+					 <li>行前准备</li>
+					 <li>常见问题</li>
+				 </ul>
+		      </li>
+			  <li><a href="#">学生体验</a></li>
+			 </ul> </li>
+		   <li class="dropdown  first-nav"><span>职业发展<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">雇主服务·</a>
+				 <ul class="third-nav">
+					 <li>招聘发布</li>
+					 <li>在校生数据</li>
+					 <li>就业报告</li>
+					 <li>招聘日历</li>
+				 </ul>
+			  </li>
+			  <li><a href="#">学生服务·</a>
+				 <ul class="third-nav">
+					 <li>就业手续</li>
+					 <li>职业发展协会</li>
+				 </ul>
+			  </li>
+			 </ul> </li>
+		   <li class="dropdown  first-nav"><span>校友天地<i class="icon icon-arrow"></i></span>
+			 <ul class="sec-nav">
+			  <li><a href="#">校友动态</a></li>
+			  <li><a href="#">校友服务</a></li>
+			  <li><a href="#">校友活动</a></li>
+			  <li><a href="#">校友捐赠</a></li>
+			 </ul> </li>
+       </ul>
+      </div>
+  </div>
+  </body>
+</html>
