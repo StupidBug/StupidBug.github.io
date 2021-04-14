@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+		h1{text-align: center;font-size:50px;background-color: linen;font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";border-radius:50px}
+		</style>
+	</head>
+<body>
+<h1>welcome to my page!</h1>
+<script>
+		function light(sw){
+			var pic;
+			if(sw==0){
+				pic="\down.gif"
+			}
+			else{
+				pic="off.gif"
+			}
+			document.getElementById('myImage').src=pic;
+		}
+	</script>
+	<div style="text-align: center;font-size=50px;">
+	<img id="myImage" src="down.gif" width="109" height="180" alt=""/>
+	<p>
+	<button type="button" onclick="light(1)">开灯</button>
+	<button type="button" onclick="light(0)">关灯</button>
+	</p>
+	</div>
+</body>
+</html>
