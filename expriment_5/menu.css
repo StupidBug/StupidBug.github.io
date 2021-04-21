@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+  padding: 0;
+  margin:0;
+}
+body 
+{
+	margin:0;
+	background-repeat: no-repeat;
+  box-sizing: border-box;
+	height:1400px;
+}
+.nav 
+{ 
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(242,242,242,0.93);
+  opacity:90%;
+  width:100%;
+  height: 40px;
+}
+.first-nav{
+  width: 140px;
+}
+li a{
+  color: rgba(40,40,40,0.89);
+  text-decoration: none;
+  font-size:15px;
+  font-weight: 600;
+  font-family:汉仪综艺体简;
+  line-height: 40px;
+}
+.dropdown-content{
+  display: none;
+  width: 140px;
+  opacity:90%;
+  background-color: rgba(242,242,242,0.93);
+  position: absolute;
+}
+li{
+  list-style-type: none;
+  text-align: center;
+}
+.container{
+  position: fixed;
+  width: 100%;
+}
+.dropdown-content li:hover 
+{background-color: #f1f1f1;}
+
+.first-nav:hover
+{
+  background-color: rgba(210,210,210,0.73);
+}
