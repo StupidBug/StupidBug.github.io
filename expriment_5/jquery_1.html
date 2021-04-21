@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="menu.css" rel="stylesheet" type="text/css" />
+<script src="jquery/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+      $(".first-nav").mouseover(function(){
+        $(this).children(".dropdown-content").stop().slideDown()    
+      })
+    })
+    $(document).ready(function(){
+      $(".first-nav").mouseout(function(){
+        $(this).children(".dropdown-content").stop().slideUp()    
+      })
+    })
+</script>
+</head>
+<body background="bizhi2.jpg">
+<div class="container">
+<ul class="nav">
+  <li class="first-nav"><a href="">咖友天地</a></li>
+  <li class="first-nav"><a href="">咖友推荐</a>
+    <ul class="dropdown-content">
+      <li><a href="">好店推荐</a></li>
+      <li><a href="">品牌推荐</a></li>
+      <li><a href="">品牌上新</a></li>
+    </ul>
+  </li>
+  <li class="first-nav"><a href="#news">咖啡资讯</a></li>
+  <li class="first-nav"><a href="">咖友文化</a>
+    <ul class="dropdown-content">
+      <li><a href="">咖啡历史</a></li>
+      <li><a href="">饮用方法</a></li>
+      <li><a href="">咖啡与中国</a></li>
+    </ul>
+  </li>
+  <li class="first-nav"><a href="">咖友制作</a>
+    <ul class="dropdown-content">
+      <li><a href="">滴滤咖啡</a></li>
+      <li><a href="">虹吸壶（Syphon）</a></li>
+      <li><a href="">摩卡壶（Moka Pot）</a></li>
+      <li><a href="">比利时皇家咖啡壶</a></li>
+      <li><a href="">法式滤压壶</a></li>
+      <li><a href="">电动式咖啡机</a></li>
+    </ul>
+  </li>
+  <li class="first-nav"><a href="">咖友风味</a>
+    <ul class="dropdown-content">
+      <li><a href="">产地</a></li>
+      <li><a href="">咖啡树</a></li>
+      <li><a href="">分类</a></li>
+    </ul>
+  </li>
+
+</ul>
+</div>
+</body>
+</html>
