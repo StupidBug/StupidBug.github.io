@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>校园通行码</title>
+
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		* {
+			margin: 0;
+		}
+
+		body {
+			background-color: rgb(244, 244, 244);
+			width: 100%;
+			max-width: 800px;
+			margin: 0 auto;
+
+		}
+
+		.xinxi {
+			background-color: #fff;
+			text-align: center;
+			color: #626262;
+			padding: 20px 0;
+			font-size: 16px;
+		}
+
+		input {
+			border: 0;
+			color: #626262;
+			font-size: 16px;
+			margin: 5px;
+			width: 8em;
+			outline: none;
+
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<img src="wang.jpg" width="100%">
+
+	<div class="xinxi">
+		<div>人员信息：王雨晴-基础医学院</div>
+		<div>入校时间：<span class="sj" id="times"></span>
+		</div>
+
+
+	</div>
+
+	<script>
+
+		function getDate() {
+			Date.prototype.format = function (fmt) {
+				var o = {
+					"M+": this.getMonth() + 1,                 //月份
+					"d+": this.getDate(),                    //日
+					"h+": this.getHours(),                   //小时
+					"m+": this.getMinutes(),                 //分
+					"s+": this.getSeconds(),                 //秒
+					"q+": Math.floor((this.getMonth() + 3) / 3), //季度
+					"S": this.getMilliseconds()             //毫秒
+				};
+
+				if (/(y+)/.test(fmt)) {
+					fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+				}
+
+				for (var k in o) {
+					if (new RegExp("(" + k + ")").test(fmt)) {
+						fmt = fmt.replace(
+							RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+					}
+				}
+
+				return fmt;
+			}
+
+			var date = new Date().format("yyyy-MM-dd hh:mm:ss");
+			var div1 = document.getElementById("times");
+			div1.innerHTML = date;
+			div1.classList.add("sj");
+		}
+		setInterval("getDate()", 1000);
+	</script>
+
+</body>
+
+</html>
